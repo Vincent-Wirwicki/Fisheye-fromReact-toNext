@@ -1,0 +1,77 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem;
+    width: 99vw;
+    min-height: 100vh;
+}
+
+.userInfo{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap:3rem;
+    padding: 2rem;
+}
+
+.userInfoItemPhoto{
+    justify-self: center;
+}
+
+.tagItem {
+    margin-right: 10px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
+.userPhotoGrid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 3rem;
+    padding: 2rem;
+}
+
+.photoGridItem {
+    display: block;
+    width:15rem;
+    height: 15rem;
+}
+
+.imgWrap{
+    display: block;
+    width: 15rem;
+    height: 15rem;
+    padding: 0.3rem;
+    overflow: hidden;
+}
+
+.imgWrapProfile{
+    display: block;
+    width: 10rem;
+    height: 10rem;
+    border-radius:50%;
+    border: solid black 2px;
+    padding: 0.3rem;
+    overflow: hidden;
+    justify-self: center;
+}
+
+.popUp{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);    
+    position: absolute;
+    padding: 4rem;
+    top:0;
+    left:0;
+    width:99vw;
+    height: 100vh;
+    z-index: 4;
+    background: #D9D2C5;
+    
+}
+
+.popUpImg{
+    display: block;
+    width:25rem;
+    height: 25rem;
+}

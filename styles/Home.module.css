@@ -1,0 +1,84 @@
+.container {
+  position: absolute;
+  top:0;
+  left: 0;
+  padding: 5rem;
+  overflow-x: hidden;
+  min-height: 100vh;
+  width:99vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  row-gap: 1rem;
+  column-gap: 5rem;
+  width:60vw;
+  padding-left: 8rem;
+}
+
+.gridItem{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width:10rem;
+  height:25rem;
+}
+
+.name{
+  cursor: pointer;
+}
+
+.location{
+  font-size: 0.8rem;
+}
+
+.price{
+  font-size: 0.8rem;
+}
+
+.tagsWrap{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
+.tagItem {
+  margin-right: 10px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.imgWrap{
+  display: block;
+  width: 8rem;
+  height: 8rem;
+  border-radius:50%;
+  border: solid black 2px;
+  padding: 0.3rem;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 2rem;
+    padding-left: 5rem;
+  }
+  .container{
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .grid {
+    grid-template-columns: repeat(1,1fr);
+    column-gap: 0.5rem;
+  }
+  .container{
+    padding: 2rem;
+  }
+}
