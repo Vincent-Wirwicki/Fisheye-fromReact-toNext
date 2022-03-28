@@ -1,6 +1,6 @@
 import styles from "../../styles/Nav.module.css";
 
-const UniqueTag = ({ uniqueTag, onRemove, current, onClick }) => {
+const UniqueTag = ({ uniqueTag, current, onClick }) => {
   return (
     <div className={styles.tagWrap}>
       <button
@@ -8,7 +8,6 @@ const UniqueTag = ({ uniqueTag, onRemove, current, onClick }) => {
         onClick={e => {
           onClick(e);
         }}
-        onDoubleClick={onRemove}
       >
         #{uniqueTag}
       </button>

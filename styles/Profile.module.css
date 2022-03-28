@@ -75,3 +75,21 @@
     width:25rem;
     height: 25rem;
 }
+
+@media (max-width: 960px) {
+    .userPhotoGrid {
+        grid-template-columns: repeat(2,1fr);
+    }
+  }
+
+  @media (max-width: 580px) {
+    .userPhotoGrid {
+        grid-template-columns: repeat(1,1fr);
+
+    }
+    .userInfo{
+
+        grid-gap:2rem;
+        padding: 0.5rem;
+    }
+  }

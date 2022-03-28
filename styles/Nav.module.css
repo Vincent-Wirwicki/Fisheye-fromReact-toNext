@@ -4,6 +4,7 @@
     left: 10vw;
     display: flex;
     align-items: baseline;
+    justify-content: unset;
     flex-direction: column;
     min-width: fit-content;
     width: 10vw;
@@ -27,11 +28,18 @@
 .visible {
     opacity: 1;
     font-weight: bold;
-
 }
 
 .notVisible{
     opacity: 0;
+}
+
+.btn{
+    text-decoration: underline;
+    background: none;
+    border: 0px;
+    cursor: pointer;
+    margin:  10px 0;
 }
 
 .selected{
@@ -48,7 +56,6 @@
     border: 0px;
     cursor: pointer;
     margin:  10px 0;
-
 }
 
 .logo{
@@ -61,8 +68,15 @@
     }
 } 
 
-@media (max-width: 400px) {
+/* @media (max-width: 400px) {
     .container {
-        left:0.5rem
+        left:0.5rem;
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: space-between;
     }
-} 
+
+    .allTagsWrap{
+        flex-direction: row;
+    }
+}  */

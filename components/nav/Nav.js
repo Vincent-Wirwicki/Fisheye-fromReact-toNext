@@ -1,6 +1,6 @@
 import UniqueTag from "./UniqueTag";
 import Link from "next/link";
-import style from "../../styles/Nav.module.css";
+import styles from "../../styles/Nav.module.css";
 import { useState } from "react";
 
 const Nav = ({ dataTags, onFilter, onRemove }) => {
@@ -15,20 +15,20 @@ const Nav = ({ dataTags, onFilter, onRemove }) => {
   mergeTags();
   const uniqueTags = filterUniqueTags(allTags);
 
+  const utils = () => {
+    setIsFilter(false);
+    setIsActive();
+    onRemove();
+  };
+
   return (
-    <section className={style.container}>
+    <section className={styles.container}>
       <Link href="/">
-        <h1
-          className={style.logo}
-          onClick={() => {
-            onRemove();
-            setIsActive("");
-          }}
-        >
+        <h1 className={styles.logo} onClick={utils}>
           Fisheye
         </h1>
       </Link>
-      <div className={style.allTagsWrap}>
+      <div className={styles.allTagsWrap}>
         {uniqueTags.map((uniqueTag, i) => (
           <UniqueTag
             uniqueTag={uniqueTag}
@@ -42,10 +42,10 @@ const Nav = ({ dataTags, onFilter, onRemove }) => {
           />
         ))}
       </div>
-      {isFilter ? (
-        <button onClick={setIsFilter(false)}>clear Filter</button>
-      ) : (
-        ""
+      {isFilter && (
+        <button className={styles.btn} onClick={utils}>
+          clear Filter
+        </button>
       )}
     </section>
   );

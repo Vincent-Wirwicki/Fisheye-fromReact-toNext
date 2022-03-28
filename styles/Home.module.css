@@ -62,15 +62,22 @@
   overflow: hidden;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 960px) {
   .grid {
     grid-template-columns: repeat(2,1fr);
     column-gap: 2rem;
-    padding-left: 5rem;
+    padding-left: 8rem;
   }
   .container{
-    padding: 2rem;
+    padding: 5rem 2rem;
   }
+}
+@media (max-width: 768px) {
+  .grid {
+
+    padding-left: 5rem;
+  }
+
 }
 
 @media (max-width: 400px) {
